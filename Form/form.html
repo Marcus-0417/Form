@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #member-form > *{
+            display: block;
+        }
+        #member-form label{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 搜尋欄位 -->
+    <form action="#" method="post" name="search-form" id="search-form" title="搜尋表單">
+        <!-- 欄位項目名稱 -->
+        <label for="search">搜尋：</label>
+        <!-- 文字欄位輸入框 -->
+        <input type="search" name="search" id="search" title="搜尋欄位" placeholder="請輸入關鍵字">
+        <!-- 搜尋按鈕 -->
+        <input type="submit" name="search-btn" id="search-btn" title="搜尋按鈕" value="搜尋">
+    </form>
+    <hr>
+    <!-- 會員資料修改表單 -->
+    <h2>會員資料修改</h2>
+    <form action="#" name="member-form" id="member-form" title="會員資料修改表單">
+        <label for="username">*姓名：</label>
+        <input type="text" name="username" id="username" title="姓名" placeholder="請輸入姓名" required autofocus>
+        
+        <label for="userid">*(只讀)身分證字號：</label><!-- readonly 只讀欄位一定要給值 -->
+        <input type="text" name="userid" id="userid" title="身分證字號" value="Q778830678" required readonly maxlength="10">
+
+        <label for="account">*(禁用)帳號：</label><!-- disabled 禁用欄位一定要給值 -->
+        <input type="text" name="account" id="account" title="account" value="Q778830678@gmail.com" required disabled>
+
+        <label for="password">*密碼：</label>
+        <input type="password" name="password" id="password" title="密碼" placeholder="請輸入密碼" required>
+
+        <label for="password-1">*再次確認密碼：</label>
+        <input type="password" name="password" id="password-1" title="再次確認密碼" placeholder="請再次確認密碼" required>
+
+        <label for="email">*Email：</label>
+        <input type="email" name="email" id="email" title="Email" placeholder="請輸入Email" required >
+
+        <label for="tel">聯絡電話：</label>
+        <input type="tel" name="tel" id="tel" title="" placeholder="0987830678">
+
+        <label for="birthday">生日：</label>
+        <input type="date" name="birthday" id="birthday" title="生日">
+
+        <label for="sex">性別：</label>
+        <select name="sex" id="sex" title="性別欄位">
+            <option value="">請選擇</option>
+            <option value="生理男">生理男</option>
+            <option value="生理女">生理女</option>
+        </select>
+
+        <label for="other">其他類別：</label>
+        <select name="other" id="other">
+            <option value="">請選擇</option>
+            <optgroup label="分類一">
+                <option value="選項一">選項一</option>
+                <option value="選項二">選項二</option>
+                <option value="選項三">選項三</option>
+            </optgroup>
+            <optgroup label="分類二">
+                <option value="選項一">選項一</option>
+                <option value="選項二">選項二</option>
+                <option value="選項三">選項三</option>
+            </optgroup>
+
+        </select>
+
+    </form>
+
+    <!-- 頁尾區 -->
+    <footer><small>(表單僅示意，不會對外蒐集資料。/此表單僅為展示使用)</small></footer>
+</body>
+
+</html>
